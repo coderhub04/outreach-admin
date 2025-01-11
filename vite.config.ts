@@ -10,4 +10,13 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      input: '/index.html',
+    },
+  },
+  server: {
+    // Ensure that your dev server handles SPA routes
+    hmr: true,
+  },
 })
